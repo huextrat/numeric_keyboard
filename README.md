@@ -6,7 +6,7 @@ A simple steps indicator widget
 
 ## Installation
 
-Add `numeric_keyboard: ^0.1.0+1` in your `pubspec.yaml` dependencies. And import it:
+Add `numeric_keyboard: ^0.1.1` in your `pubspec.yaml` dependencies. And import it:
 
 ```dart
 import 'package:numeric_keyboard/numeric_keyboard.dart';
@@ -14,7 +14,7 @@ import 'package:numeric_keyboard/numeric_keyboard.dart';
 
 ## How to use
 
-Simply create a `StepsIndicator` widget and pass the required params:
+Simply create a `NumericKeyboard` widget and pass the required params:
 
 ```dart
 NumericKeyboard(
