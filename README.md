@@ -2,7 +2,7 @@
 
 [![pub package](https://img.shields.io/pub/v/numeric_keyboard.svg?style=for-the-badge&color=blue)](https://pub.dartlang.org/packages/numeric_keyboard)
 
-A simple steps indicator widget
+A simple numeric keyboard widget
 
 ## Installation
 
@@ -51,7 +51,7 @@ For a more detail example please take a look at the `example` folder.
 
 ## Example
 
-Steps indicator:
+Numeric keyboard:
 
 <img src="https://raw.githubusercontent.com/huextrat/numeric_keyboard/master/example/screenshot.png" width="400" height="790">
 
