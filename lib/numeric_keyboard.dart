@@ -11,15 +11,17 @@ class NumericKeyboard extends StatefulWidget {
   final Icon leftIcon;
   final Function() leftButtonFn;
   final KeyboardTapCallback onKeyboardTap;
+  final MainAxisAlignment mainAxisAlignment;
 
   NumericKeyboard(
       {Key key,
-      @required this.onKeyboardTap,
-      this.textColor = Colors.black,
-      this.rightButtonFn,
-      this.rightIcon,
-      this.leftButtonFn,
-      this.leftIcon})
+        @required this.onKeyboardTap,
+        this.textColor = Colors.black,
+        this.rightButtonFn,
+        this.rightIcon,
+        this.leftButtonFn,
+        this.leftIcon,
+        this.mainAxisAlignment = MainAxisAlignment.spaceEvenly})
       : super(key: key);
 
   @override
@@ -37,7 +39,7 @@ class _NumericKeyboardState extends State<NumericKeyboard> {
       child: Column(
         children: <Widget>[
           ButtonBar(
-            alignment: MainAxisAlignment.spaceBetween,
+            alignment: widget.mainAxisAlignment,
             children: <Widget>[
               _calcButton('1'),
               _calcButton('2'),
@@ -45,7 +47,7 @@ class _NumericKeyboardState extends State<NumericKeyboard> {
             ],
           ),
           ButtonBar(
-            alignment: MainAxisAlignment.spaceBetween,
+            alignment: widget.mainAxisAlignment,
             children: <Widget>[
               _calcButton('4'),
               _calcButton('5'),
@@ -53,7 +55,7 @@ class _NumericKeyboardState extends State<NumericKeyboard> {
             ],
           ),
           ButtonBar(
-            alignment: MainAxisAlignment.spaceBetween,
+            alignment: widget.mainAxisAlignment,
             children: <Widget>[
               _calcButton('7'),
               _calcButton('8'),
@@ -61,7 +63,7 @@ class _NumericKeyboardState extends State<NumericKeyboard> {
             ],
           ),
           ButtonBar(
-            alignment: MainAxisAlignment.spaceBetween,
+            alignment: widget.mainAxisAlignment,
             children: <Widget>[
               InkWell(
                   borderRadius: BorderRadius.circular(45),

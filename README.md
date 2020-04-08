@@ -6,7 +6,7 @@ A simple numeric keyboard widget
 
 ## Installation
 
-Add `numeric_keyboard: ^0.1.1` in your `pubspec.yaml` dependencies. And import it:
+Add `numeric_keyboard: ^1.0.0` in your `pubspec.yaml` dependencies. And import it:
 
 ```dart
 import 'package:numeric_keyboard/numeric_keyboard.dart';
@@ -43,7 +43,8 @@ NumericKeyboard(
   leftButtonFn: () {
     print('left button clicked');
   },
-  leftIcon: Icon(Icons.check, color: Colors.red,)
+  leftIcon: Icon(Icons.check, color: Colors.red,),
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly
 )
 ```
 

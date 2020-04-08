@@ -1,7 +1,6 @@
 name: numeric_keyboard
 description: Flutter plugin to display a simple numeric keyboard on Android & iOS.
-version: 0.1.1
-author: Hugo EXTRAT <extrat.h@gmail.com>
+version: 1.0.0
 homepage: https://github.com/huextrat/numeric_keyboard
 
 environment:

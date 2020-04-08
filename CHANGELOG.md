@@ -1,3 +1,7 @@
+## [1.0.0] - Fix issue
+
+Use your own alignment
+
 ## [0.1.1] - Fix issue
 
 Fix issue
