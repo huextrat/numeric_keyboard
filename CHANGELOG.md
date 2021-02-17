@@ -1,3 +1,7 @@
+## [1.0.1] - Documentation
+
+Improve documentation
+
 ## [1.0.0] - Fix issue
 
 Use your own alignment
