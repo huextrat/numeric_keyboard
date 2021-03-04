@@ -9,16 +9,16 @@ class NumericKeyboard extends StatefulWidget {
   final Color textColor;
 
   /// Display a custom right icon
-  final Icon rightIcon;
+  final Icon? rightIcon;
 
   /// Action to trigger when right button is pressed
-  final Function() rightButtonFn;
+  final Function()? rightButtonFn;
 
   /// Display a custom left icon
-  final Icon leftIcon;
+  final Icon? leftIcon;
 
   /// Action to trigger when left button is pressed
-  final Function() leftButtonFn;
+  final Function()? leftButtonFn;
 
   /// Callback when an item is pressed
   final KeyboardTapCallback onKeyboardTap;
@@ -27,8 +27,8 @@ class NumericKeyboard extends StatefulWidget {
   final MainAxisAlignment mainAxisAlignment;
 
   NumericKeyboard(
-      {Key key,
-      @required this.onKeyboardTap,
+      {Key? key,
+      required this.onKeyboardTap,
       this.textColor = Colors.black,
       this.rightButtonFn,
       this.rightIcon,

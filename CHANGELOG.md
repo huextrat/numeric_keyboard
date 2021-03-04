@@ -1,3 +1,8 @@
+## [1.1.0] - 2021-04-04
+
+- Null safety
+- Tested on Flutter 2.0 it's working on every platform
+
 ## [1.0.1] - Documentation
 
 Improve documentation
