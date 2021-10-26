@@ -26,6 +26,15 @@ class NumericKeyboard extends StatefulWidget {
   /// Main axis alignment [default = MainAxisAlignment.spaceEvenly]
   final MainAxisAlignment mainAxisAlignment;
 
+  /// Size of the buttons
+  final double? buttonSize;
+
+  /// Size of the numbers and icons in buttons
+  final double? fontSize;
+
+  /// Font Weight for numbers in buttons
+  final FontWeight? fontWeight;
+
   NumericKeyboard(
       {Key? key,
       required this.onKeyboardTap,
@@ -34,7 +43,10 @@ class NumericKeyboard extends StatefulWidget {
       this.rightIcon,
       this.leftButtonFn,
       this.leftIcon,
-      this.mainAxisAlignment = MainAxisAlignment.spaceEvenly})
+      this.mainAxisAlignment = MainAxisAlignment.spaceEvenly,
+      this.buttonSize = 50,
+      this.fontSize = 26,
+      this.fontWeight})
       : super(key: key);
 
   @override
@@ -83,8 +95,8 @@ class _NumericKeyboardState extends State<NumericKeyboard> {
                   onTap: widget.leftButtonFn,
                   child: Container(
                       alignment: Alignment.center,
-                      width: 50,
-                      height: 50,
+                      width: widget.buttonSize,
+                      height: widget.buttonSize,
                       child: widget.leftIcon)),
               _calcButton('0'),
               InkWell(
@@ -92,8 +104,8 @@ class _NumericKeyboardState extends State<NumericKeyboard> {
                   onTap: widget.rightButtonFn,
                   child: Container(
                       alignment: Alignment.center,
-                      width: 50,
-                      height: 50,
+                      width: widget.buttonSize,
+                      height: widget.buttonSize,
                       child: widget.rightIcon))
             ],
           ),
@@ -110,13 +122,13 @@ class _NumericKeyboardState extends State<NumericKeyboard> {
         },
         child: Container(
           alignment: Alignment.center,
-          width: 50,
-          height: 50,
+          width: widget.buttonSize,
+          height: widget.buttonSize,
           child: Text(
             value,
             style: TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.bold,
+                fontSize: widget.fontSize,
+                fontWeight: widget.fontWeight,
                 color: widget.textColor),
           ),
         ));
