@@ -39,12 +39,15 @@ NumericKeyboard(
       text = text.substring(0, text.length - 1);
     });
   },
-  rightIcon: Icon(Icons.backspace, color: Colors.red,),
+  rightIcon: Icon(Icons.backspace, color: Colors.red, size: 26),
   leftButtonFn: () {
     print('left button clicked');
   },
-  leftIcon: Icon(Icons.check, color: Colors.red,),
-  mainAxisAlignment: MainAxisAlignment.spaceEvenly
+  leftIcon: Icon(Icons.check, color: Colors.red, size: 26),
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  fontSize: 26,
+  buttonSize: 50,
+  fontWeight: FontWeight.bold,
 )
 ```
 
