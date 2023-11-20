@@ -31,6 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue,
       appBar: AppBar(
         title: Text(widget.title),
       ),
@@ -40,8 +41,40 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           Text(text),
           NumericKeyboard(
+            buttonWidget: (value, onKeyboardTap) => Container(
+              alignment: Alignment.center,
+              width: 50,
+              height: 50,
+              child: Material(
+                color: Colors.white.withAlpha(51),
+                borderRadius: BorderRadius.circular(45),
+                child: InkWell(
+                  splashColor: Colors.white.withAlpha(128),
+                  borderRadius: BorderRadius.circular(45),
+                  onTap: onKeyboardTap,
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(45),
+                      color: Colors.transparent,
+                    ),
+                    child: Center(
+                      child: Text(
+                        value,
+                        style: TextStyle(
+                          fontSize: 26,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
             onKeyboardTap: _onKeyboardTap,
-            textColor: Colors.red,
+            textColor: Colors.white,
             rightButtonFn: () {
               setState(() {
                 text = text.substring(0, text.length - 1);
@@ -49,14 +82,14 @@ class _MyHomePageState extends State<MyHomePage> {
             },
             rightIcon: Icon(
               Icons.backspace,
-              color: Colors.red,
+              color: Colors.white,
             ),
             leftButtonFn: () {
               print('left button clicked');
             },
             leftIcon: Icon(
               Icons.check,
-              color: Colors.red,
+              color: Colors.white,
             ),
           ),
         ],
