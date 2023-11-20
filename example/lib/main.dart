@@ -43,8 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
           NumericKeyboard(
             buttonWidget: (value, onKeyboardTap) => Container(
               alignment: Alignment.center,
-              width: 50,
-              height: 50,
+              width: 80,
+              height: 80,
               child: Material(
                 color: Colors.white.withAlpha(51),
                 borderRadius: BorderRadius.circular(45),
@@ -53,8 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   borderRadius: BorderRadius.circular(45),
                   onTap: onKeyboardTap,
                   child: Container(
-                    width: 50,
-                    height: 50,
+                    width: 80,
+                    height: 80,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(45),
                       color: Colors.transparent,
