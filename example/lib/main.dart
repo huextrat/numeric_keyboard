@@ -40,56 +40,59 @@ class _MyHomePageState extends State<MyHomePage> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text(text),
-          NumericKeyboard(
-            buttonWidget: (value, onKeyboardTap) => Container(
-              alignment: Alignment.center,
-              width: 80,
-              height: 80,
-              child: Material(
-                color: Colors.white.withAlpha(51),
-                borderRadius: BorderRadius.circular(45),
-                child: InkWell(
-                  splashColor: Colors.white.withAlpha(128),
+          Container(
+            width: MediaQuery.of(context).size.width * 0.65,
+            child: NumericKeyboard(
+              buttonWidget: (value, onKeyboardTap) => Container(
+                alignment: Alignment.center,
+                width: 80,
+                height: 80,
+                child: Material(
+                  color: Colors.white.withAlpha(51),
                   borderRadius: BorderRadius.circular(45),
-                  onTap: onKeyboardTap,
-                  child: Container(
-                    width: 80,
-                    height: 80,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(45),
-                      color: Colors.transparent,
-                    ),
-                    child: Center(
-                      child: Text(
-                        value,
-                        style: TextStyle(
-                          fontSize: 26,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                  child: InkWell(
+                    splashColor: Colors.white.withAlpha(128),
+                    borderRadius: BorderRadius.circular(45),
+                    onTap: onKeyboardTap,
+                    child: Container(
+                      width: 80,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(45),
+                        color: Colors.transparent,
+                      ),
+                      child: Center(
+                        child: Text(
+                          value,
+                          style: TextStyle(
+                            fontSize: 26,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-            onKeyboardTap: _onKeyboardTap,
-            textColor: Colors.white,
-            rightButtonFn: () {
-              setState(() {
-                text = text.substring(0, text.length - 1);
-              });
-            },
-            rightIcon: Icon(
-              Icons.backspace,
-              color: Colors.white,
-            ),
-            leftButtonFn: () {
-              print('left button clicked');
-            },
-            leftIcon: Icon(
-              Icons.check,
-              color: Colors.white,
+              onKeyboardTap: _onKeyboardTap,
+              textColor: Colors.white,
+              rightButtonFn: () {
+                setState(() {
+                  text = text.substring(0, text.length - 1);
+                });
+              },
+              rightIcon: Icon(
+                Icons.backspace,
+                color: Colors.white,
+              ),
+              leftButtonFn: () {
+                print('left button clicked');
+              },
+              leftIcon: Icon(
+                Icons.check,
+                color: Colors.white,
+              ),
             ),
           ),
         ],
