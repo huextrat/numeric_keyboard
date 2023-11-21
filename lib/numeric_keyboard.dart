@@ -18,6 +18,7 @@ class NumericKeyboard extends StatelessWidget {
     this.rightIcon,
     this.leftButtonFn,
     this.leftIcon,
+    this.padding,
     this.mainAxisAlignment = MainAxisAlignment.spaceEvenly,
   });
 
@@ -45,9 +46,11 @@ class NumericKeyboard extends StatelessWidget {
   /// Main axis alignment [default = MainAxisAlignment.spaceEvenly]
   final MainAxisAlignment mainAxisAlignment;
 
+  final EdgeInsets? padding;
+
   @override
   Widget build(BuildContext context) => Container(
-        padding: const EdgeInsets.only(left: 32, right: 32, top: 20),
+        padding: padding,
         alignment: Alignment.center,
         child: Column(
           children: <Widget>[
