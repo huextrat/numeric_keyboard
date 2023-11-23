@@ -32,20 +32,32 @@ _onKeyboardTap(String value) {
 
 ```dart
 NumericKeyboard(
+  buttonsDecoration: defaultDecoration,
   onKeyboardTap: _onKeyboardTap,
-  textColor: Colors.red,
+  getAllSpace: true,
+  numbersTextStyle: TextStyle(
+    fontSize: 25,
+    fontFamily: 'Arial',
+    fontWeight: FontWeight.w400,
+    color: Colors.black,
+  ),
   rightButtonFn: () {
     setState(() {
       text = text.substring(0, text.length - 1);
     });
   },
-  rightIcon: Icon(Icons.backspace, color: Colors.red,),
+  rightIcon: Icon(
+    Icons.backspace,
+    color: Colors.black,
+  ),
   leftButtonFn: () {
     print('left button clicked');
   },
-  leftIcon: Icon(Icons.check, color: Colors.red,),
-  mainAxisAlignment: MainAxisAlignment.spaceEvenly
-)
+  leftIcon: Icon(
+    Icons.check,
+    color: Colors.black,
+  ),
+),
 ```
 
 For a more detail example please take a look at the `example` folder.
@@ -54,8 +66,8 @@ For a more detail example please take a look at the `example` folder.
 
 Numeric keyboard:
 
-<img src="https://raw.githubusercontent.com/huextrat/numeric_keyboard/master/example/screenshot.png" width="400" height="790">
-<img src="https://raw.githubusercontent.com/huextrat/numeric_keyboard/master/example/screenshot2.png" width="400" height="790">
+<img src="example\screenshot.png" width="400" height="790">
+<img src="example\screenshot2.png" width="400" height="790">
 
 ## -
 
