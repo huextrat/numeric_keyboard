@@ -55,6 +55,7 @@ For a more detail example please take a look at the `example` folder.
 Numeric keyboard:
 
 <img src="https://raw.githubusercontent.com/huextrat/numeric_keyboard/master/example/screenshot.png" width="400" height="790">
+<img src="https://raw.githubusercontent.com/huextrat/numeric_keyboard/master/example/screenshot2.png" width="400" height="790">
 
 ## -
 
