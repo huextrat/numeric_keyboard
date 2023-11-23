@@ -58,6 +58,26 @@ NumericKeyboard(
     color: Colors.black,
   ),
 ),
+
+Decoration defaultDecoration = ShapeDecoration(
+    color: Colors.white,
+    shape: RoundedRectangleBorder(
+      side: const BorderSide(
+        width: 0.50,
+        strokeAlign: BorderSide.strokeAlignCenter,
+        color: Color(0xFFAFAFAF),
+      ),
+      borderRadius: BorderRadius.circular(4.60),
+    ),
+    shadows: const [
+      BoxShadow(
+        color: Color(0x4C000000),
+        blurRadius: 0,
+        offset: Offset(0, 1),
+        spreadRadius: 0,
+      )
+    ],
+  );
 ```
 
 For a more detail example please take a look at the `example` folder.
